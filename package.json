@@ -1536,7 +1536,8 @@
   "devDependencies": {
     "commitizen": "^3.0.2",
     "cz-conventional-changelog": "^2.1.0",
-    "husky": "^1.1.1"
+    "husky": "^1.1.1",
+    "standard-version": "^4.4.0"
   },
   "homepage": "https://github.com/anguspiv/gtalumni.la#readme",
   "license": "UNLICENSED",
@@ -1548,6 +1549,7 @@
   },
   "scripts": {
     "commit": "git cz",
+    "release": "standard-version",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "version": "1.0.0",
