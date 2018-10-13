@@ -21,6 +21,9 @@ jobs:
 
       - run: npm ci
 
+      #run linters
+      - run: npm lint
+
       # run tests!
       - run: npm test
       - store_artifacts:
