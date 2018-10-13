@@ -1,4 +1,7 @@
 {
+  "name": "www.gtalumni.la",
+  "description": "Gatsby default starter",
+  "version": "1.0.0",
   "author": "Angus Perkerson <angusp@angusp.com>",
   "bugs": {
     "url": "https://github.com/anguspiv/gtalumni.la/issues"
@@ -8,29 +11,40 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "dependencies": {},
-  "description": "website for the los angeles Georgia Tech Alumni Network",
-  "devDependencies": {
+  "homepage": "https://github.com/anguspiv/gtalumni.la#readme",
+  "dependencies": {
     "commitizen": "^3.0.2",
-    "commitlint": "^7.2.0",
+    "commitlint": "^7.2.1",
     "cz-conventional-changelog": "^2.1.0",
-    "husky": "^1.1.1",
+    "gatsby": "^2.0.19",
+    "gatsby-plugin-manifest": "^2.0.5",
+    "gatsby-plugin-offline": "^2.0.5",
+    "gatsby-plugin-react-helmet": "^3.0.0",
+    "husky": "^1.1.2",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "react-helmet": "^5.2.0",
     "standard-version": "^4.4.0"
   },
-  "homepage": "https://github.com/anguspiv/gtalumni.la#readme",
-  "license": "UNLICENSED",
-  "main": "index.js",
-  "name": "www.gtalumni.la",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/anguspiv/gtalumni.la.git"
-  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
   "scripts": {
     "commit": "git cz",
     "release": "standard-version",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write '**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
-  "version": "1.0.0",
+  "devDependencies": {
+    "prettier": "^1.14.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
