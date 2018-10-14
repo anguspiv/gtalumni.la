@@ -31,7 +31,7 @@ jobs:
       # run tests!
       - run:
           name: Tests
-          command: npm test
+          command: npm test -- --ci
       - store_artifacts:
           path: test-results.xml
           destination: tests
