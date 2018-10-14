@@ -19,18 +19,24 @@ jobs:
     steps:
       - checkout
 
-      - run: npm ci
+      - run:
+          name: Install Dependencies
+          command: npm ci
 
       #run linters
-      - run: npm lint
+      - run:
+          name: Lint
+          command: npm run lint
 
       # run tests!
-      - run: npm test
+      - run:
+          name: Tests
+          command: npm test
       - store_artifacts:
           path: test-results.xml
-          prefix: tests
+          destination: tests
       - store_artifacts:
           path: coverage
-          prefix: coverage
+          destination: coverage
       - store_test_results:
           path: test-results.xml
